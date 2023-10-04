@@ -47,7 +47,7 @@ open class WindowViewController: UIViewController
         }
     }
 
-    private func show(becomeKey: Bool, frame: CGRect? = nil) {
+    open func show(becomeKey: Bool, frame: CGRect? = nil) {
         guard let window = window else { return }
         window.frame = frame ?? UIScreen.main.bounds
         if becomeKey {
