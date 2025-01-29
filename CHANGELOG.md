@@ -1,7 +1,54 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## 10.0.1
+
+## Features
+
+* #523 Add a `priority` configuration option.
+* #548 Adds 'TopBottomPresentable' protocol to allow animators implementation to reuse 'top/bottom' integration in presentation
+* #543 Make the `SwiftMessages` initializer `nonisolated` to improve interoperability with dependency injection frameworks like Factory.
+* #560 Add a new `swiftMessage` modifier variation that provides a ` MessageGeometryProxy` type to the message view builder—this works around an inssue with `GeometryReader` not working in `UIHostingController`.
+
+Fixes
+* Fix broken touch handling in iOS 18.
+
+## 10.0.0
+
+### Features
+
+* Add a variation on the `.swiftMessage()` modifier that takes a view builder instead of requiring that the bound value conform to `MessageViewConvertible`. This syntax is more similar to the familiar `sheet()` modifier syntax and provides more flexibility for constructing message views.
+* #207 Add optional haptic feedback
+
+### Changes
+
+* Use `@MainActor` to ensure that SwiftMessages is not called from a background queue.
+* Bump minimum deployment target to iOS 13.
+
+### Fixes
+
+* #535 window being accessed from background thread when dequeueNext is called
+* #534 Xcode warnings in two swift files
+* #533 How do I show a message that appears above the keyboard, when the keyboard is already visible?
+
+## 9.0.9
+
+### Fixes
+
+* Fix hit testing on SwiftUI views to allow touches around the view's margins to pass through to the underlying view.
+* Update `KeyboardTrackingView` to continue tracking the keyboard even when not installed in the view hierarchy.
+
+## 9.0.8
+
+### Changes
+
+* #529 Update readme and SwiftUI demo to demostrate how to mask edges.
+
 ## 9.0.7
+
+### Features
+
+* Added support for SwiftUI
 
 ### Fixes
 
