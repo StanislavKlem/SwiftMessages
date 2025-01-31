@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    func sm_selectPresentationContextTopDown(_ config: SwiftMessages.Config) -> UIViewController {
+    func sm_selectPresentationContextTopDown(_ config: SwiftMessage.Config) -> UIViewController {
         let topBottomStyle = config.presentationStyle.topBottomStyle
         if let presented = presentedViewController {
             return presented.sm_selectPresentationContextTopDown(config)
@@ -50,7 +50,7 @@ extension UIViewController {
         return nil
     }
 
-    func sm_selectPresentationContextBottomUp(_ config: SwiftMessages.Config) -> UIViewController {
+    func sm_selectPresentationContextBottomUp(_ config: SwiftMessage.Config) -> UIViewController {
         let topBottomStyle = config.presentationStyle.topBottomStyle
         if let parent = parent {
             if let navigationController = parent as? UINavigationController {
@@ -86,7 +86,7 @@ extension UIViewController {
     }
 }
 
-extension SwiftMessages.PresentationStyle {
+extension SwiftMessage.PresentationStyle {
     /// A temporary workaround to allow custom presentation contexts using `TopBottomAnimation`
     /// to display properly behind bars. THe long term solution is to refactor all of the
     /// presentation context logic to work with safe area insets.

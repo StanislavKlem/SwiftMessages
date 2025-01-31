@@ -184,7 +184,7 @@ extension MessageView {
      - Returns: An instance of generic view type `T: MessageView`.
      */
     public static func viewFromNib<T: MessageView>(layout: Layout, filesOwner: AnyObject = NSNull.init()) -> T {
-        return try! SwiftMessages.viewFromNib(named: layout.rawValue)
+        return try! SwiftMessage.viewFromNib(named: layout.rawValue)
     }
     
     /**
@@ -199,7 +199,7 @@ extension MessageView {
      - Returns: An instance of generic view type `T: MessageView`.
      */
     public static func viewFromNib<T: MessageView>(layout: Layout, bundle: Bundle, filesOwner: AnyObject = NSNull.init()) -> T {
-        return try! SwiftMessages.viewFromNib(named: layout.rawValue, bundle: bundle, filesOwner: filesOwner)
+        return try! SwiftMessage.viewFromNib(named: layout.rawValue, bundle: bundle, filesOwner: filesOwner)
     }
 }
 
